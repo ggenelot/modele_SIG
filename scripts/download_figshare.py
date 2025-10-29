@@ -9,6 +9,7 @@ item_ids = [17714843,153788]
 
 #Set the base URL
 BASE_URL = 'https://api.figshare.com/v2'
+api_call_headers = {'Authorization': 'token $env:FIGSHARE_TOKEN'}
 
 file_info = [] #a blank list to hold all the file metadata
 
