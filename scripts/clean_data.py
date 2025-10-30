@@ -114,3 +114,54 @@ if __name__ == "__main__":
     if __name__ == "__main__":
         # main() already runs above; run the specific extraction to ensure the geopackage is in processed
         extract_filosofi_zip()
+
+        def extract_bdtopo_7z():
+            p = Path(__file__).resolve()
+            project_root = p.parents[1]
+            raw = project_root / "data" / "raw"
+            processed = project_root / "data" / "processed"
+            src = raw / "BDTOPO_3-5_TOUSTHEMES_GPKG_RGAF09UTM20_R02_2025-09-15.7z"
+
+            if not src.exists():
+                logging.info("7z not found, skipping: %s", src)
+                return
+
+            processed.mkdir(parents=True, exist_ok=True)
+            try:
+                logging.info("Extracting 7z: %s -> %s", src, processed)
+                with py7zr.SevenZipFile(src, mode="r") as archive:
+                    archive.extractall(path=processed)
+                logging.info("Extraction complete: %s", src)
+            except Exception as e:
+                logging.error("Failed to extract %s: %s", src, e)
+
+
+        if __name__ == "__main__":
+            extract_bdtopo_7z()
+
+            # remove specific leftover .7z files (and any other top-level .7z in processed) to keep workspace clean
+            p = Path(__file__).resolve()
+            project_root = p.parents[1]
+            processed = project_root / "data" / "processed"
+
+            leftovers = [
+                "Filosofi2017_carreaux_200m_gpkg.7z",
+                "BDTOPO_3-5_TOUSTHEMES_GPKG_RGAF09UTM20_R02_2025-09-15.7z",
+            ]
+
+            for name in leftovers:
+                f = processed / name
+                if f.exists():
+                    try:
+                        f.unlink()
+                        logging.info("Removed leftover archive: %s", f)
+                    except Exception as e:
+                        logging.error("Failed to remove %s: %s", f, e)
+
+            # also remove any other top-level .7z files in data/processed
+            for z in processed.glob("*.7z"):
+                try:
+                    z.unlink()
+                    logging.info("Removed additional .7z: %s", z)
+                except Exception as e:
+                    logging.error("Failed to remove %s: %s", z, e)
