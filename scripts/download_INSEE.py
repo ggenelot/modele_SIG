@@ -4,6 +4,7 @@ import logging
 from urllib.parse import urlparse
 import requests
 import shutil
+from tqdm import tqdm
 
 #!/usr/bin/env python3
 """
@@ -14,7 +15,9 @@ Download a file and save it to data/raw relative to the repository root
 """
 
 # URL to download (can be overridden by first CLI arg)
-URL = "https://www.insee.fr/fr/statistiques/fichier/6215138/Filosofi2017_carreaux_200m_gpkg.zip"
+#URL = "https://www.insee.fr/fr/statistiques/fichier/6215138/Filosofi2017_carreaux_200m_gpkg.zip"
+URL = "https://data.geopf.fr/telechargement/download/BDTOPO/BDTOPO_3-5_TOUSTHEMES_GPKG_RGAF09UTM20_R02_2025-09-15/BDTOPO_3-5_TOUSTHEMES_GPKG_RGAF09UTM20_R02_2025-09-15.7z"
+
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 
@@ -34,18 +37,19 @@ def download_with_requests(url: str, dest: Path) -> None:
 
     with requests.get(url, stream=True, timeout=30) as r:
         r.raise_for_status()
-        total = int(r.headers.get("content-length", 0))
+        total = int(r.headers.get("content-length") or 0)
         chunk_size = 8192
-        downloaded = 0
-        with dest.open("wb") as f:
+        with dest.open("wb") as f, tqdm(
+            total=(total if total else None),
+            unit="B",
+            unit_scale=True,
+            desc=dest.name,
+        ) as pbar:
             for chunk in r.iter_content(chunk_size=chunk_size):
                 if not chunk:
                     continue
                 f.write(chunk)
-                downloaded += len(chunk)
-                if total:
-                    pct = downloaded * 100 // total
-                    logging.info("Downloading %s: %d%% (%d/%d bytes)", dest.name, pct, downloaded, total)
+                pbar.update(len(chunk))
     logging.info("Saved to %s", dest)
 
 
