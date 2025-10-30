@@ -4,6 +4,8 @@ import shutil
 import zipfile
 from pathlib import Path
 import sys
+import subprocess
+import py7zr
 
 #!/usr/bin/env python3
 """
@@ -68,3 +70,47 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+    # Ensure this specific geopackage zip from data/raw is extracted into data/processed
+    def extract_filosofi_zip():
+        p = Path(__file__).resolve()
+        project_root = p.parents[1]
+        raw = project_root / "data" / "raw"
+        processed = project_root / "data" / "processed" /"Filosofi2017"
+        z = raw / "Filosofi2017_carreaux_200m_gpkg.zip"
+
+        if not z.exists():
+            logging.INFO("Specified zip not found, skipping: %s", z)
+            return
+
+        processed.mkdir(parents=True, exist_ok=True)
+        try:
+            logging.info("Extracting %s -> %s", z, processed)
+            with zipfile.ZipFile(z, "r") as zf:
+                zf.extractall(processed)
+            logging.info("Zip extraction complete: %s", z)
+
+            # After extracting the zip, look for any .7z archives and extract them in place
+            for sev in processed.rglob("*.7z"):
+                try:
+                    logging.info("Found 7z archive, extracting: %s", sev)
+                    with py7zr.SevenZipFile(sev, mode="r") as sz:
+                        sz.extractall(path=sev.parent)
+                    logging.info("7z extraction complete: %s -> %s", sev, sev.parent)
+                    # Remove the .7z after successful extraction
+                    try:
+                        sev.unlink()
+                        logging.info("Removed 7z archive: %s", sev)
+                    except Exception as e:
+                        logging.error("Failed to remove 7z %s: %s", sev, e)
+                except Exception as e:
+                    logging.error("Failed to extract 7z %s: %s", sev, e)
+
+        except zipfile.BadZipFile:
+            logging.error("Bad zip file: %s", z)
+        except Exception as e:
+            logging.error("Failed to extract %s: %s", z, e)
+
+    if __name__ == "__main__":
+        # main() already runs above; run the specific extraction to ensure the geopackage is in processed
+        extract_filosofi_zip()
