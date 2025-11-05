@@ -15,8 +15,8 @@ Download a file and save it to data/raw relative to the repository root
 """
 
 # URL to download (can be overridden by first CLI arg)
-#URL = "https://www.insee.fr/fr/statistiques/fichier/6215138/Filosofi2017_carreaux_200m_gpkg.zip"
-URL = "https://data.geopf.fr/telechargement/download/BDTOPO/BDTOPO_3-5_TOUSTHEMES_GPKG_RGAF09UTM20_R02_2025-09-15/BDTOPO_3-5_TOUSTHEMES_GPKG_RGAF09UTM20_R02_2025-09-15.7z"
+URL = "https://www.insee.fr/fr/statistiques/fichier/6215138/Filosofi2017_carreaux_200m_gpkg.zip"
+#URL = "https://data.geopf.fr/telechargement/download/BDTOPO/BDTOPO_3-5_TOUSTHEMES_GPKG_RGAF09UTM20_R02_2025-09-15/BDTOPO_3-5_TOUSTHEMES_GPKG_RGAF09UTM20_R02_2025-09-15.7z"
 
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
