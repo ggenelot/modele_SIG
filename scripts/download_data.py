@@ -142,3 +142,5 @@ def download_ESA():
     ### Download 
     # download the products to the given directory 
     catalogue.download_products(products, "data/raw/ESA_worldcover")
+
+download_figshare()
