@@ -1,18 +1,21 @@
-.. TC damage spatial analysis documentation master file, created by
-   sphinx-quickstart on Thu Nov 20 13:32:44 2025.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 TC damage spatial analysis documentation
 ========================================
 
 Hello world
 
-
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-download_data
-download_INSEE
-download_OSM
+   download_data
+   download_INSEE
+   download_OSM
+
+I want to see the autodoc from download_INSEE module
+===================================================
+
+.. automodule:: hurricanes
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
