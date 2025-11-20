@@ -11,7 +11,7 @@ Hello world
    download_INSEE
    download_OSM
 
-I want to see the autodoc from download_INSEE module
+Hurricane function documentation
 ===================================================
 
 .. automodule:: hurricanes
