@@ -5,22 +5,30 @@ import numpy as np
 
 def blank_raster_from_track(track, resolution=0.01, pad=1.0):
     """
-    Create a DataArray of zeros covering the extent of a cyclone track.
-    
+    Create a zero-filled raster (xarray.DataArray) that spans the spatial
+    extent of a cyclone track.
+
     Parameters
     ----------
-    track : iterable of dict or objects with attributes
-        Must contain 'lat' and 'lon' entries.
-    resolution : float
-        Grid cell size in degrees.
-    pad : float
-        Extra degrees added around the bounding box.
-    
+    track : pandas.DataFrame
+        A DataFrame containing at least the columns ``"Latitude"`` and
+        ``"Longitude"``. Each row represents a track point.
+    resolution : float, optional
+        Grid resolution in degrees for both latitude and longitude.
+        Default is 0.01.
+    pad : float, optional
+        Padding (in degrees) added to all sides of the track’s bounding box.
+        Default is 1.0.
+
     Returns
     -------
     xarray.DataArray
-        DataArray with dims (lat, lon) filled with zeros.
+        A DataArray named ``"blank"`` with dimensions ``("lat", "lon")``.
+        All values are zeros. Coordinates correspond to regularly spaced
+        latitude and longitude arrays covering the track’s extent + padding.
     """
+
+
     # Extract lats/lons
     #lats = np.array([p["lat"] for p in track])
     #lons = np.array([p["lon"] for p in track])
@@ -51,9 +59,27 @@ def blank_raster_from_track(track, resolution=0.01, pad=1.0):
 
 def haversine_distance(lat_center, lon_center, lat, lon):
     """
-    Computes the haversine distance (km) between a center point
-    and arrays of points (lat, lon).
+    Compute great-circle distances using the haversine formula.
+
+    Parameters
+    ----------
+    lat_center : float
+        Latitude of the center point in degrees.
+    lon_center : float
+        Longitude of the center point in degrees.
+    lat : array-like
+        Array of latitudes of the target points in degrees.
+    lon : array-like
+        Array of longitudes of the target points in degrees.
+
+    Returns
+    -------
+    numpy.ndarray
+        Array of distances (in kilometers) from the center point to each
+        (lat, lon) location. Output shape matches the broadcasted shapes
+        of ``lat`` and ``lon``.
     """
+
     R = 6371.0  # Earth radius in km
     
     lat1 = np.radians(lat_center)
@@ -71,9 +97,29 @@ def haversine_distance(lat_center, lon_center, lat, lon):
 
 def mask_points_within_distance(da, lat_center, lon_center, max_distance_km):
     """
-    Returns a boolean DataArray mask where each cell indicates
-    whether the grid point is within max_distance_km of (lat_center, lon_center).
+    Create a boolean mask indicating which grid cells fall within
+    a given great-circle distance from a central point.
+
+    Parameters
+    ----------
+    da : xarray.DataArray
+        A DataArray with ``lat`` and ``lon`` coordinates. Typically the
+        output of ``blank_raster_from_track``.
+    lat_center : float
+        Latitude of the center point in degrees.
+    lon_center : float
+        Longitude of the center point in degrees.
+    max_distance_km : float
+        Maximum distance (in kilometers) defining the mask radius.
+
+    Returns
+    -------
+    xarray.DataArray
+        Boolean mask DataArray of shape ``(lat, lon)`` where ``True``
+        indicates that the grid point is within ``max_distance_km``.
+        Coordinates from ``da`` are preserved.
     """
+
     # Get broadcasting coordinate grids
     Lon, Lat = np.meshgrid(da.lon.values, da.lat.values)
     
@@ -92,6 +138,34 @@ def mask_points_within_distance(da, lat_center, lon_center, max_distance_km):
     )
 
 def track_to_ds(track, resolution=0.05):
+    """
+    Convert a cyclone track DataFrame into a gridded Dataset of wind speeds.
+
+    For each track point, the function:
+    1. Creates a spatial mask corresponding to the radius of maximum winds.
+    2. Multiplies the mask by the maximum wind speed.
+    3. Stacks all time steps into a new ``time_step`` dimension.
+
+    Parameters
+    ----------
+    track : pandas.DataFrame
+        Must contain the following columns:
+        - ``"Latitude"``
+        - ``"Longitude"``
+        - ``"Maximum wind speed"``
+        - ``"Radius to maximum winds"``
+        - ``"Time step"``
+    resolution : float, optional
+        Spatial resolution of the output grid in degrees. Default is 0.05.
+
+    Returns
+    -------
+    xarray.Dataset
+        Dataset with a single variable ``"wind_speed"`` and dimensions
+        ``("time_step", "lat", "lon")``. Each time step contains the wind
+        speed field computed from the distance mask multiplied by the
+        maximum wind speed.
+    """
 
     # Create an empty da that has the shape of the track
     da = blank_raster_from_track(track, resolution=resolution)
