@@ -91,3 +91,25 @@ def mask_points_within_distance(da, lat_center, lon_center, max_distance_km):
         name="mask_within_distance"
     )
 
+def track_to_ds(track, resolution=0.05):
+
+    # Create an empty da that has the shape of the track
+    da = blank_raster_from_track(track, resolution=resolution)
+
+    # Populate the wind speed
+    masked_list = []
+    for i, step in track.iterrows():
+
+
+        wind_speed = step["Maximum wind speed"] * mask_points_within_distance(da, step["Latitude"], step["Longitude"], step["Radius to maximum winds"])
+        
+        wind_speed = wind_speed.expand_dims({"time_step": [step["Time step"]]})
+
+        masked_list.append(wind_speed)
+
+    # Combine all the DataArrays along the new time_step dimension
+    combined_da = xr.concat(masked_list, dim="time_step")
+
+    # If you want it as a Dataset instead
+    return combined_da.to_dataset(name="wind_speed")
+
