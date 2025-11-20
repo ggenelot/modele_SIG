@@ -197,5 +197,4 @@ def download_filosofi(url: str = None) -> None:
         logging.info("Saved to %s", dest)
 
 
-if __name__ == "__main__":
-    download_filosofi(sys.argv[1] if len(sys.argv) > 1 else None)
+#def download_osm()
