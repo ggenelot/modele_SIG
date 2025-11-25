@@ -37,7 +37,7 @@ def track_in_geometry(df, geometry, tc_col='TC number', year_col='Year',
     
     return df
 
-def filter_track(df, column, condition, tc_col = 'TC Number', year_col='Year', return_filtered = True):
+def filter_track(df, column, condition, tc_col = 'TC number', year_col='Year', return_filtered = True):
 
     # Create a temporary hurricane ID by combining TC_number and Year
     df['_hurricane_id'] = df[tc_col].astype(str) + "_" + df[year_col].astype(str)
