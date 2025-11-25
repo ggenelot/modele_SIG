@@ -37,7 +37,7 @@ def track_in_geometry(df, geometry, tc_col='TC number', year_col='Year',
     
     return df
 
-def filter_track(df, column, condition, tc_col = 'TC Number', year_col='Year'):
+def filter_track(df, column, condition, tc_col = 'TC Number', year_col='Year', return_filtered = True):
 
     # Create a temporary hurricane ID by combining TC_number and Year
     df['_hurricane_id'] = df[tc_col].astype(str) + "_" + df[year_col].astype(str)
@@ -59,6 +59,11 @@ def filter_track(df, column, condition, tc_col = 'TC Number', year_col='Year'):
     
     # Drop the temporary ID column
     df = df.drop(columns=['_hurricane_id'])
+
+    # Return only the filtered values
+    if return_filtered: 
+        df=df[df[f'{column}_condition_met'] == True]
+        df=df.drop(columns=f'{column}_condition_met')
     
     return df
 
