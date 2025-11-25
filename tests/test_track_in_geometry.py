@@ -14,4 +14,4 @@ def test_track_in_geometry():
 
     out = track_in_geometry(df, poly, new_col="inside")
 
-    assert out["inside"].all() is True
+    assert out["inside"].all() == True

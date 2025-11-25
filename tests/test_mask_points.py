@@ -12,4 +12,4 @@ def test_mask_points():
 
     # Center cell is within 200 km
     center_idx = (mask.lat.values == 0) & (mask.lon.values == 0)
-    assert mask.values[center_idx][0] is True
+    assert mask.values[center_idx][0][0] == True
