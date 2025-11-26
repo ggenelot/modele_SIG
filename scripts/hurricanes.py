@@ -38,8 +38,8 @@ def filter_track_in_geometry(df, geometry, tc_col='TC number', year_col='Year',
     df = df.drop(columns=['_hurricane_id'])
     
     if return_filtered:
-        df=df[df["in_geometry"]==True]
-        df = df.drop(columns="in_geometry")
+        df=df[df[new_col]==True]
+        df = df.drop(columns=new_col)
 
     return df
 

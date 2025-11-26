@@ -1,6 +1,6 @@
 import pandas as pd
 from shapely.geometry import Polygon
-from scripts.hurricanes import track_in_geometry
+from scripts.hurricanes import filter_track_in_geometry
 
 def test_track_in_geometry():
     df = pd.DataFrame({
@@ -12,6 +12,6 @@ def test_track_in_geometry():
 
     poly = Polygon([(0,0),(0,20),(60,20),(60,0)])
 
-    out = track_in_geometry(df, poly, new_col="inside")
+    out = filter_track_in_geometry(df, poly, new_col="inside", return_filtered=False)
 
     assert out["inside"].all() == True
