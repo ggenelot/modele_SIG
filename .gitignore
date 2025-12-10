@@ -5,3 +5,27 @@ data/external/*
 *.zip
 cache/*
 scripts/cache/*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+
+# Pytest
+.pytest_cache/
+
+# Sphinx
+docs/build/
+docs/_build/
+docs/cache/
+
+# Data
+data/
+*.nc
+*.tif
+
+# OS
+.DS_Store
+Thumbs.db
