@@ -29,6 +29,15 @@ numfig_format = {
     "table": "Table %s",
 }
 
+# -- Options for the bibliography --------------------------------------------
+
+extensions += [
+    "sphinxcontrib.bibtex",
+]
+
+bibtex_bibfiles = ["references.bib"]
+bibtex_reference_style = "author_year"
+
 
 # -- Path to project code ----------------------------------------------------
 

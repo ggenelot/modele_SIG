@@ -15,3 +15,4 @@ Coupling GIS with prospective models to inform adaptation policy in Martinique
    discussion
    perspectives
    liste_figures
+   bibliographie

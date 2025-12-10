@@ -10,4 +10,4 @@ Carte du risque cyclonique en Martinique.
 ```
 
 Comme illustré dans la {numref}`fig-carte-risque`, les zones littorales
-présentent une vulnérabilité accrue.
+présentent une vulnérabilité accrue {cite:p}`ipcc2021`.
