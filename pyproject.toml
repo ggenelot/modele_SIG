@@ -1,14 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "modele-sig"
 version = "0.1.0"
 description = "Open-science tools for hurricane and geospatial processing"
-authors = [{name = "Your Name"}]
+authors = [
+  { name = "Gabriel Genelot" }
+]
 requires-python = ">=3.9"
-dependencies = []
 
-[build-system]
-requires = ["setuptools>=64", "wheel"]
-build-backend = "setuptools.build_meta"
+dependencies = [
+  "numpy",
+  "pandas",
+  "geopandas",
+  "shapely",
+  "rasterio",
+  "xarray",
+]
+
+[project.optional-dependencies]
+
+# Documentation (Read the Docs)
+docs = [
+  "sphinx",
+  "myst-nb",
+  "sphinx-rtd-theme",
+]
+
+# Développement
+dev = [
+  "pytest",
+  "ruff",
+]
 
 [tool.setuptools]
 packages = ["scripts"]
