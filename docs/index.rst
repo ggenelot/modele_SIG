@@ -14,3 +14,4 @@ Coupling GIS with prospective models to inform adaptation policy in Martinique
    results/index
    discussion
    perspectives
+   liste_figures
