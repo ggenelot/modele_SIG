@@ -22,6 +22,7 @@ autodoc_default_options = {
     "undoc-members": True,
     "show-inheritance": True,
 }
+autodoc_mock_imports = ["py7zr"]
 
 
 # MyST / Markdown
