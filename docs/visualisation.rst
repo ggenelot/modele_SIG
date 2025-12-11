@@ -1,7 +1,8 @@
-download\_OSM module
+visualisation module
 ====================
 
-.. automodule:: utils.download_OSM
+.. automodule:: utils.visualisation
    :members:
    :undoc-members:
    :show-inheritance:
+

@@ -1,7 +1,7 @@
 clean\_data module
 ==================
 
-.. automodule:: clean_data
+.. automodule:: utils.data_clean
    :members:
-   :show-inheritance:
    :undoc-members:
+   :show-inheritance:

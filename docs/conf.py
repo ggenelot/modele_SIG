@@ -16,6 +16,21 @@ extensions = [
 ]
 autosummary_generate = True
 
+autosummary_generate = True
+autodoc_default_options = {
+    "members": True,
+    "undoc-members": True,
+    "show-inheritance": True,
+}
+autodoc_mock_imports = [
+    "py7zr",
+    "rioxarray",
+    "matplotlib",
+    "osmnx",
+    "terracatalogueclient",
+]
+
+
 # MyST / Markdown
 myst_enable_extensions = [
     "colon_fence",  # needed for ::: and mermaid code fences
