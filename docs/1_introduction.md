@@ -2,7 +2,7 @@
 
 Projet de thèse. 
 
-```mermaid
+```{mermaid}
 graph TD
     contexte --> risque
     contexte --> prospective
