@@ -34,6 +34,11 @@ docs = [
 
 ]
 
+myst_enable_extensions = [
+    "colon_fence",   # utile mais pas nécessaire pour mermaid
+]
+
+
 
 # Développement
 dev = [
