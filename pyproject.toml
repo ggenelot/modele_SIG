@@ -49,6 +49,7 @@ dev = [
   "py7zr",
   "osmnx",
   "terracatalogueclient",
+  "matplotlib",
 ]
 
 
