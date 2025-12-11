@@ -10,3 +10,4 @@ scripts
    download_data
    hurricanes
    processing
+   visualisation

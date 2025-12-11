@@ -8,6 +8,7 @@ API du code
    utils.data_clean
    utils.hurricanes
    utils.processing
+   utils.visualisation
    utils.download_data
    utils.download_INSEE
    utils.download_OSM
