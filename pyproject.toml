@@ -44,6 +44,8 @@ myst_enable_extensions = [
 dev = [
   "pytest",
   "ruff",
+  "flake8",
+  "nbmake",
 ]
 
 [tool.setuptools]
