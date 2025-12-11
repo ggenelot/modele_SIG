@@ -1,7 +1,7 @@
 hurricanes module
 =================
 
-.. automodule:: hurricanes
+.. automodule:: utils.hurricanes
    :members:
-   :show-inheritance:
    :undoc-members:
+   :show-inheritance:

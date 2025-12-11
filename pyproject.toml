@@ -48,8 +48,9 @@ dev = [
   "nbmake",
 ]
 
+
 [tool.setuptools]
-packages = ["scripts"]
+package-dir = {"" = "src"}
 
 [tool.setuptools.package-dir]
 scripts = "scripts"
@@ -62,3 +63,5 @@ line-length = 88
 [tool.black]
 line-length = 88
 
+[tool.setuptools.packages.find]
+where = ["src"]

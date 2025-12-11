@@ -1,7 +1,7 @@
 processing module
 =================
 
-.. automodule:: processing
+.. automodule:: utils.processing
    :members:
-   :show-inheritance:
    :undoc-members:
+   :show-inheritance:
