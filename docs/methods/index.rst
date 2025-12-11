@@ -17,10 +17,3 @@ Contents
     ../../notebooks/modeling_damages
     ../../notebooks/tropical_storms
 
-
-Indices and tables
--------------------
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
