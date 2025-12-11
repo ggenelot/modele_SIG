@@ -9,6 +9,7 @@ Ce site est pensé comme une thèse vivante. Il contient de manière évolutive 
 
    1_introduction
    2_state_of_the_art
+   contexte/index
    methods/index
    experiments/index
    results/index
