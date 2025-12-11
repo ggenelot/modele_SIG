@@ -1,4 +1,4 @@
-SIG et prospective : ´evaluer spatialement les impacts
+SIG et prospective : évaluer spatialement les impacts
 des cyclones tropicaux aux Petites Antilles
 ===========================================
 
