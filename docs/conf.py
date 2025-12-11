@@ -33,8 +33,10 @@ autodoc_mock_imports = [
 
 # On autorise Sphinx à parcourir l'arborescence
 include_patterns = [
-    "../notebooks/*.ipynb",
+    '**',                 # inclure tous les fichiers standards dans docs/
+    '../notebooks/*.ipynb',   # ajouter explicitement l'accès aux notebooks externes
 ]
+
 
 
 myst_enable_extensions = [
