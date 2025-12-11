@@ -123,18 +123,25 @@ style finalité fill: #FFEC5C, color:#fff;
 
 La modélisation prospective imagine les futurs possibles pour éclairer les choix actuels qui permettent de les construire. Le changement climatique a et aura de nombreux effets adverses, appelés dommages ou impacts. Leur fréquence et leur intensité dépendent de mesures et de politiques actuelles. Un des rôles de la modélisation est ainsi d'informer les décideurs pour prendre des mesures adéquates.
 
-On peut distinguer trois types de mesures permettant de limiter les dommages. D'abord, l'atténuation, qui cherche à limiter le changement climatique. Ensuite, l'adaptation, qui cherche à réduire les effets de phénomènes adverses quand ils arrivent. Enfin, la compensation, qui vise à prendre en compte les impacts qui n'ont pas été limités par l'atténuation ou l'adaptation. L'objectif de cette thèse est de proposer des outils pour mieux comprendre les effets de politiques d'adaptation sur les dommages, dans le cadre de cyclones tropicaux dans les Caraïbes.
+On peut distinguer trois types de mesures permettant de limiter les dommages. 
+
+- D'abord, l'atténuation, qui cherche à limiter le changement climatique.
+- Ensuite, l'adaptation, qui cherche à réduire les effets de phénomènes adverses quand ils arrivent.
+- Enfin, la compensation, qui vise à prendre en compte les impacts qui n'ont pas été limités par l'atténuation ou l'adaptation.
+
+L'objectif de cette thèse est de proposer des outils pour mieux comprendre les effets de politiques d'adaptation sur les dommages, dans le cadre de cyclones tropicaux dans les Caraïbes.
 
 ## Littératures existantes
 
-Ce projet de recherche s'inscrit à l'intersection de différents types de littérature : la littérature grise autour du risque, la géographie du risque et la modélisation prospective.  \\
+Ce projet de recherche s'inscrit à l'intersection de différents types de littérature : la littérature grise autour du risque, la géographie du risque et la modélisation prospective. 
 
 
 ### Littérature institutionnelle
 
 D'abord, une littérature grise importante existe autour des impacts du changement climatique. 
+
 D'une part, des rapports publics mettent en avant le besoin de développer une approche spécifique aux territoires ultramarins. Un rapport de l'observatoire national sur les effets du réchauffement climatique pointe la nécessité d'évaluer le coût des impacts du changement climatique et les limites de la modélisation climatique dans les politiques d'adaptation (\cite{onercOutremerFaceAu2012}). Par ailleurs, deux autres rapports, sur l'adaptation et sur les littoraux, pointent la nécessité de prendre en compte les dommages et ne prennent pas en compte de manière spécifique les territoires ultramarins (\cite{onercLadaptationFranceAu2012, onercLittoralDansContexte2015}).  
-D'autre part, les assurances estiment régulièrement les coûts du changement climatique. On peut notamment citer une étude de la Caisse Centrale de Réassurance qui a simulé l'impact d'un cyclone de type Irma sur la Guadeloupe, pour estimer les pertes économiques (\cite{nsandaCatastrophesNaturellesFrance2024}). \\
+D'autre part, les assurances estiment régulièrement les coûts du changement climatique. On peut notamment citer une étude de la Caisse Centrale de Réassurance qui a simulé l'impact d'un cyclone de type Irma sur la Guadeloupe, pour estimer les pertes économiques (\cite{nsandaCatastrophesNaturellesFrance2024}). 
 
 
 
@@ -157,26 +164,23 @@ Plus récemment, des modèles plus précis ciblent un phénomène physique parti
 
 ## Questions de recherche
 
-La question centrale de cette thèse est \textit{quelles mesures actuelles permettent de limiter les impacts des cyclones dans le futur ?} \\
+La question centrale de cette thèse est *quelles mesures actuelles permettent de limiter les impacts des cyclones dans le futur ?*
 
-Elle se décompose en deux grandes catégories de questions. D'une part, des questions opérationnelles, qui justifient l'usage d'un modèle et de techniques de prospective. Celles-ci répondent directement à la question centrale : \\
+Elle se décompose en deux grandes catégories de questions. D'une part, des questions opérationnelles, qui justifient l'usage d'un modèle et de techniques de prospective. Celles-ci répondent directement à la question centrale : 
 
-\begin{itemize}
-    \item Quelle est la distribution spatiale des dommages ? 
-    \item Peut-on, par des mesures d'aménagement, modifier la distribution de ces impacts ? 
-    \item Quels sont les choix d'aménagement disponibles ? \\
-\end{itemize}
+- Quelle est la distribution spatiale des dommages ? 
+- Peut-on, par des mesures d'aménagement, modifier la distribution de ces impacts ? 
+- Quels sont les choix d'aménagement disponibles ? 
 
 
 
 D'autre part, des questions épistémiques sur l'intérêt de ce type de modélisation. On évalue là la pertinence du couplage modèle de prospective - analyse spatiale pour répondre à des questions d'aménagement de long terme. \\ 
 
-\begin{itemize}
-    \item Cette technique permet-elle d'évaluer les dommages de manière plus globale, notamment en prenant en compte des dommages non monétaires (notamment naturels) ? 
-    \item Arrive-t-on à prendre en compte l'effet de phénomènes extrêmes, et notamment localisés dans le temps et dans l'espace ? 
-    \item Peut-on rendre compte de dommages non monétaires ? 
-    \item Comment associer des données qualitatives et quantitatives ? 
-\end{itemize}
+- Cette technique permet-elle d'évaluer les dommages de manière plus globale, notamment en prenant en compte des dommages non monétaires (notamment naturels) ? 
+- Arrive-t-on à prendre en compte l'effet de phénomènes extrêmes, et notamment localisés dans le temps et dans l'espace ? 
+- Peut-on rendre compte de dommages non monétaires ? 
+- Comment associer des données qualitatives et quantitatives ? 
+
 
 ## Méthodologie
 
@@ -185,17 +189,21 @@ On simule l'effet du passage d'un cyclone sur une île des petites Antilles. On 
 ### Choix des données et représentations
 
 On utilise des données spatialisées variées pour représenter les enjeux du territoire choisi. 
+
 Quatre grands types de données sont associés : topographie (élévation , pente, bathymétrie (\cite{institutgeographiquenationalBDTOPO2025})) ; cyclones synthétiques (précipitation, vents, marée cyclonique (\cite{bloemendaalSTORMIBTrACSPresent2022, bloemendaalSTORMClimateChange2023})); aménagement (usages des sols (\cite{zanagaESAWorldCover102022}, routes, bâtis (\cite{OSM}); et socio-économiques (densité de population, taux de pauvreté (\cite{inseeFilosofi2021})).
+
 Le niveau de granularité n'est pas encore défini ; il devrait être de l'ordre de la dizaine de mètres ou de la centaine de mètres. Pour comparaison, les données de Filosofi sont disponibles à 200m; les données de couverture du sol à 10m; de topographie à 30m. 
 
 
 
 ### Modélisation des fonctions de dommage
 
-On modélise les fonctions de dommage, c'est-à-dire qu'on définit la relation entre le passage d'un cyclone et les autres variables. En d'autres termes, on écrit une fonction mathématique qui donne les impacts à partir du cyclone. Cette représentation se fait de deux manières. D'une part, on se base sur la revue de littérature pour mobiliser des fonctions de dommage existantes et les adapter aux données spatiales. D'autre part, des entretiens permettent d'inclure des données qualitatives dans les fonctions de dommage. 
+On modélise les fonctions de dommage, c'est-à-dire qu'on définit la relation entre le passage d'un cyclone et les autres variables. En d'autres termes, on écrit une fonction mathématique qui donne les impacts à partir du cyclone. Cette représentation se fait de deux manières. D'une part, on se base sur la revue de littérature pour mobiliser des fonctions de dommage existantes et les adapter aux données spatiales. D'autre part, des entretiens permettent d'inclure des données qualitatives dans les fonctions de dommage.
 
 
 ### Simulation et itération
 
-On simule le passage d'un cyclone et on observe les évolutions de nos variables. On recommence les opérations 1 à 3 avec différentes options d'aménagement pour les comparer. 
+On simule le passage d'un cyclone et on observe les évolutions de nos variables. On recommence les opérations 1 à 3 avec différentes options d'aménagement pour les comparer.
+
+
 

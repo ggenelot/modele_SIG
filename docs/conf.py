@@ -1,6 +1,6 @@
 # Configuration file for the Sphinx documentation builder.
 
-project = 'TC damage spatial analysis'
+project = 'SIG et prospective'
 copyright = '2025, Gabriel Genelot'
 author = 'Gabriel Genelot'
 
