@@ -1,10 +1,12 @@
 """Helpers to download OpenStreetMap features with osmnx."""
 
-import osmnx as ox
 import geopandas as gpd
+import osmnx as ox
 
 
-def download_osm_features(place_name: str = "martinique", tags: dict | None = None) -> gpd.GeoDataFrame:
+def download_osm_features(
+    place_name: str = "martinique", tags: dict | None = None
+) -> gpd.GeoDataFrame:
     """
     Fetch OpenStreetMap features for a given place.
 

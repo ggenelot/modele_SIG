@@ -79,11 +79,23 @@ def main():
     parser = argparse.ArgumentParser(
         description="Copy raw -> processed and unzip files"
     )
-    parser.add_argument("--src", type=Path, default=default_src, help="Source raw folder")
     parser.add_argument(
-        "--dst", type=Path, default=default_dst, help="Destination processed folder"
+        "--src",
+        type=Path,
+        default=default_src,
+        help="Source raw folder",
     )
-    parser.add_argument("--keep-zips", action="store_true", help="Keep .zip files after extraction")
+    parser.add_argument(
+        "--dst",
+        type=Path,
+        default=default_dst,
+        help="Destination processed folder",
+    )
+    parser.add_argument(
+        "--keep-zips",
+        action="store_true",
+        help="Keep .zip files after extraction",
+    )
     args = parser.parse_args()
 
     try:
@@ -103,7 +115,7 @@ if __name__ == "__main__":
         p = Path(__file__).resolve()
         project_root = p.parents[1]
         raw = project_root / "data" / "raw"
-        processed = project_root / "data" / "processed" /"Filosofi2017"
+        processed = project_root / "data" / "processed" / "Filosofi2017"
         z = raw / "Filosofi2017_carreaux_200m_gpkg.zip"
 
         if not z.exists():
@@ -161,7 +173,6 @@ if __name__ == "__main__":
                 logging.info("Extraction complete: %s", src)
             except Exception as e:
                 logging.error("Failed to extract %s: %s", src, e)
-
 
         if __name__ == "__main__":
             extract_bdtopo_7z()

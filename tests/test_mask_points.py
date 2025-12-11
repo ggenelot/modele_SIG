@@ -1,12 +1,9 @@
 import pandas as pd
-
 from src.hurricanes import blank_raster_from_track, mask_points_within_distance
 
+
 def test_mask_points():
-    df = pd.DataFrame({
-        "Latitude": [0],
-        "Longitude": [0]
-    })
+    df = pd.DataFrame({"Latitude": [0], "Longitude": [0]})
 
     da = blank_raster_from_track(df, resolution=1.0, pad=1.0)
     mask = mask_points_within_distance(da, 0, 0, max_distance_km=200)
