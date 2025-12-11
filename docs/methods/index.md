@@ -1,11 +1,8 @@
-.. methods documentation master file, created by
-    sphinx-quickstart on Tue Oct 10 12:00:00 2023.
+# Welcome to the Methods Documentation
 
-Welcome to the Methods Documentation
-=====================================
 
-Contents
---------
+## Contents
+
 
 .. toctree::
     :maxdepth: 1
