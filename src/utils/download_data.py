@@ -1,15 +1,15 @@
-import os
-import requests
 import json
-from pathlib import Path
-from terracatalogueclient import Catalogue 
-import rasterio
-from rasterio.plot import show
-from pathlib import Path
-import sys
 import logging
-from urllib.parse import urlparse
+import os
 import shutil
+import sys
+from pathlib import Path
+from urllib.parse import urlparse
+
+import rasterio
+import requests
+from rasterio.plot import show
+from terracatalogueclient import Catalogue
 
 def download_elevation():
     """

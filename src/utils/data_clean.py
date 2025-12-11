@@ -1,10 +1,10 @@
 import argparse
 import logging
 import shutil
+import sys
 import zipfile
 from pathlib import Path
-import sys
-import subprocess
+
 import py7zr
 
 #!/usr/bin/env python3
@@ -76,9 +76,13 @@ def main():
     default_src = project_root / "data/raw"
     default_dst = project_root / "data/processed"
 
-    parser = argparse.ArgumentParser(description="Copy raw -> processed and unzip files")
+    parser = argparse.ArgumentParser(
+        description="Copy raw -> processed and unzip files"
+    )
     parser.add_argument("--src", type=Path, default=default_src, help="Source raw folder")
-    parser.add_argument("--dst", type=Path, default=default_dst, help="Destination processed folder")
+    parser.add_argument(
+        "--dst", type=Path, default=default_dst, help="Destination processed folder"
+    )
     parser.add_argument("--keep-zips", action="store_true", help="Keep .zip files after extraction")
     args = parser.parse_args()
 
