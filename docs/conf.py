@@ -18,7 +18,21 @@ exclude_patterns = []
 
 # -- Options for HTML output -------------------------------------------------
 
-html_theme = "sphinx_rtd_theme"
+html_theme = "furo"
+
+# Optionnel : quelques réglages simples
+html_theme_options = {
+    "light_css_variables": {
+        "color-brand-primary": "#3A7DCE",
+        "color-brand-content": "#3A7DCE",
+    },
+    "dark_css_variables": {
+        "color-brand-primary": "#6BA4F8",
+        "color-brand-content": "#6BA4F8",
+    },
+}
+
+
 html_static_path = ["_static"]
 
 # -- Options for figure numbering --------------------------------------------
