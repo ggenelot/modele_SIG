@@ -54,7 +54,7 @@ package-dir = {"" = "src", "scripts" = "scripts"}
 
 [tool.ruff]
 line-length = 88
-exclude = ["build"]
+exclude = ["build", "notebooks"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I"]
