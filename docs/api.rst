@@ -4,6 +4,5 @@
 :toctree: _autosummary
 :recursive:
 
-utils.data_clean
-utils.hurricanes
+utils.*
 ```
