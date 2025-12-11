@@ -31,6 +31,11 @@ autodoc_mock_imports = [
     "terracatalogueclient",
 ]
 
+# On autorise Sphinx à parcourir l'arborescence
+include_patterns = [
+    "../notebooks/*.ipynb",
+]
+
 
 myst_enable_extensions = [
     "colon_fence",
