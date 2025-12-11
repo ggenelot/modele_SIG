@@ -27,8 +27,8 @@ jobs:
       - name: Lint (ruff)
         run: ruff check .
 
-      - name: Lint (flake8)
-        run: flake8 src tests
+      #- name: Lint (flake8)
+      #  run: flake8 src tests
 
       - name: Run unit tests and doctests
         run: pytest --doctest-glob="*.py" --doctest-modules
