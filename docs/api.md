@@ -1,4 +1,4 @@
-# API du code (utils, modèles, etc.)
+# API du code
 
 ```{autosummary}
 :toctree: _autosummary
