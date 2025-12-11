@@ -11,6 +11,7 @@ from typing import Iterable, Optional, Sequence, Union
 
 import geopandas as gpd
 import matplotlib.pyplot as plt
+import pandas as pd
 from shapely.geometry import LineString, Point
 
 
@@ -111,7 +112,7 @@ def tracks_to_lines_gdf(
 
 
 def plot_tracks(
-    data: Union[gpd.GeoDataFrame, "pandas.DataFrame"],
+    data: Union[gpd.GeoDataFrame, "pd.DataFrame"],
     *,
     background: Optional[gpd.GeoDataFrame] = None,
     ax=None,
@@ -165,7 +166,7 @@ def plot_tracks(
 
 
 def plot_track_points(
-    data: Union[gpd.GeoDataFrame, "pandas.DataFrame"],
+    data: Union[gpd.GeoDataFrame, "pd.DataFrame"],
     *,
     background: Optional[gpd.GeoDataFrame] = None,
     ax=None,
