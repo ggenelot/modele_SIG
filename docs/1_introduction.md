@@ -18,59 +18,59 @@ graph TD
     risque --> question
     IAM --> question
     
-    subgraph contexte[Contexte`
-    	C1[Cyclone`
-        C2[Martinique`
-        C3[Changement climatique` --> C5[Triptyque mitigation / adaptation / impacts`
-        C4[Dommages` --> C5
+    subgraph contexte[Contexte]
+    	C1[Cyclone]
+        C2[Martinique]
+        C3[Changement climatique] --> C5[Triptyque mitigation / adaptation / impacts]
+        C4[Dommages] --> C5
         
     
     end
     
-    subgraph risque["Géographie du risque"`
-        A1[Méthodes quali`
-        A2[Analyse spatiale`
-        A3[Cadre conceptuel`
+    subgraph risque["Géographie du risque"]
+        A1[Méthodes quali]
+        A2[Analyse spatiale]
+        A3[Cadre conceptuel]
         A4{Futur  ?}
     end
     
-    subgraph prospective["Rapports et assurances"`
-    	P1[Politique publique` --> P3{Outre-mer ?}
-        P2[Maille fine` --> P4{Monétaire}
+    subgraph prospective["Rapports et assurances"]
+    	P1[Politique publique] --> P3{Outre-mer ?}
+        P2[Maille fine] --> P4{Monétaire}
     end
     
-    subgraph IAM[Modélisation prospective`
-    	I1[Coût social du carbone` --> I4{Global}
-        I2[Fonctions de dommage` --> I5{Monétaire}
+    subgraph IAM[Modélisation prospective]
+    	I1[Coût social du carbone] --> I4{Global}
+        I2[Fonctions de dommage] --> I5{Monétaire}
         I2 --> I6{Adaptation ?}
     end
     
-    subgraph question[Problématique`
+    subgraph question[Problématique]
     
-    	Q0[Comment les politiques d'adaptation d'aujourd'hui permettent de limiter les impacts demain  ?` --> ope
+    	Q0[Comment les politiques d'adaptation d'aujourd'hui permettent de limiter les impacts demain  ?] --> ope
         Q0 --> epistemo
     
-    	subgraph ope[Questions opérationnelles`
-    	Q1[Quelles sont les politiques d'adaptation possibles ?`
-        Q2[Quelle est la distribution spatiale des impacts ?`
-        Q3[Peut-on modifier la distribution spatiale des impacts ?`
+    	subgraph ope[Questions opérationnelles]
+    	Q1[Quelles sont les politiques d'adaptation possibles ?]
+        Q2[Quelle est la distribution spatiale des impacts ?]
+        Q3[Peut-on modifier la distribution spatiale des impacts ?]
         end
         
-        subgraph epistemo[Questions épistémiques`
-        	Q4[Association de données quali ?`
-            Q5[Dépasser la monétarisation ?`
-            Q6[Evenement soudain et localisé ? `
+        subgraph epistemo[Questions épistémiques]
+        	Q4[Association de données quali ?]
+            Q5[Dépasser la monétarisation ?]
+            Q6[Evenement soudain et localisé ? ]
         
         end
     end
     
     question --> methodo
     
-    subgraph methodo[Méthodologie`
-    	M1[Données`
-        M2[Modélisation`
-        M3[Simulation`
-        M4[Evaluation`
+    subgraph methodo[Méthodologie]
+    	M1[Données]
+        M2[Modélisation]
+        M3[Simulation]
+        M4[Evaluation]
         M5(Itération)
         M6{Entretiens} --> M2
        
@@ -86,14 +86,14 @@ graph TD
     methodo  --> finalité
     
     
-    subgraph finalité[Finalité`
+    subgraph finalité[Finalité]
     
-    	Ac0[Accompagner la décision publique` --> Ac1
+    	Ac0[Accompagner la décision publique] --> Ac1
         Ac0 --> Ac2
         Ac0 --> Ac
-    	Ac1(Collectivité territoriale) --> F1[Aménagement du territoire`
-        Ac2(Etat) --> F2[Gestion du risque`
-        Ac(Diplomatie climatique) --> F3[Transition juste`
+    	Ac1(Collectivité territoriale) --> F1[Aménagement du territoire]
+        Ac2(Etat) --> F2[Gestion du risque]
+        Ac(Diplomatie climatique) --> F3[Transition juste]
     
     end
     
@@ -222,11 +222,11 @@ S6{SHOM} -->|coraux, bathy| T
 S7{Entretiens}--> |besoins, vulnérabilité, scénarios de dév| A
 
 
-subgraph input[input`
-M[Climato`
-S[socio-éco`
-T[Topographie`
-A[Aménagement`
+subgraph input[input]
+M[Climato]
+S[socio-éco]
+T[Topographie]
+A[Aménagement]
 end
 
 M --> |intensité| C
@@ -235,15 +235,15 @@ A --> |atténue| Al
 S --> |distribue| En
 A --> |augmente| En 
 
-subgraph modele[Représentation`
+subgraph modele[Représentation]
 
-C[Cyclone` 
-Al[Aléa`
+C[Cyclone] 
+Al[Aléa]
 C --> Al 
 
-En[Enjeu`
+En[Enjeu]
 
-Ri[Risque`
+Ri[Risque]
 Al -->|influence| Ri
 En -->|influence| Ri
 
@@ -254,9 +254,9 @@ Ri --> Ca
 Al --> Ca
 En --> Ca
 
-subgraph output[output`
+subgraph output[output]
 
-Ca[Carte`
+Ca[Carte]
 end
 
 
