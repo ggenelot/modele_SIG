@@ -263,6 +263,6 @@ end
 
 ```
 
-## Références 
+## Références  
 
 ```{bibliography}
