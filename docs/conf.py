@@ -95,6 +95,7 @@ extensions += [
 bibtex_bibfiles = ["references.bib"]
 bibtex_reference_style = "author_year"
 #bibtex_default_style = 'unsrt'
+bibtex_cite_style = "authoryear"
 
 # -- Path to project code ----------------------------------------------------
 sys.path.insert(0, os.path.abspath("../src"))
