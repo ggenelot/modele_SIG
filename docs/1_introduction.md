@@ -18,59 +18,59 @@ graph TD
     risque --> question
     IAM --> question
     
-    subgraph contexte[Contexte]
-    	C1[Cyclone]
-        C2[Martinique]
-        C3[Changement climatique] --> C5[Triptyque mitigation / adaptation / impacts]
-        C4[Dommages] --> C5
+    subgraph contexte[Contexte`
+    	C1[Cyclone`
+        C2[Martinique`
+        C3[Changement climatique` --> C5[Triptyque mitigation / adaptation / impacts`
+        C4[Dommages` --> C5
         
     
     end
     
-    subgraph risque["Géographie du risque"]
-        A1[Méthodes quali]
-        A2[Analyse spatiale]
-        A3[Cadre conceptuel]
+    subgraph risque["Géographie du risque"`
+        A1[Méthodes quali`
+        A2[Analyse spatiale`
+        A3[Cadre conceptuel`
         A4{Futur  ?}
     end
     
-    subgraph prospective["Rapports et assurances"]
-    	P1[Politique publique] --> P3{Outre-mer ?}
-        P2[Maille fine] --> P4{Monétaire}
+    subgraph prospective["Rapports et assurances"`
+    	P1[Politique publique` --> P3{Outre-mer ?}
+        P2[Maille fine` --> P4{Monétaire}
     end
     
-    subgraph IAM[Modélisation prospective]
-    	I1[Coût social du carbone] --> I4{Global}
-        I2[Fonctions de dommage] --> I5{Monétaire}
+    subgraph IAM[Modélisation prospective`
+    	I1[Coût social du carbone` --> I4{Global}
+        I2[Fonctions de dommage` --> I5{Monétaire}
         I2 --> I6{Adaptation ?}
     end
     
-    subgraph question[Problématique]
+    subgraph question[Problématique`
     
-    	Q0[Comment les politiques d'adaptation d'aujourd'hui permettent de limiter les impacts demain  ?] --> ope
+    	Q0[Comment les politiques d'adaptation d'aujourd'hui permettent de limiter les impacts demain  ?` --> ope
         Q0 --> epistemo
     
-    	subgraph ope[Questions opérationnelles]
-    	Q1[Quelles sont les politiques d'adaptation possibles ?]
-        Q2[Quelle est la distribution spatiale des impacts ?]
-        Q3[Peut-on modifier la distribution spatiale des impacts ?]
+    	subgraph ope[Questions opérationnelles`
+    	Q1[Quelles sont les politiques d'adaptation possibles ?`
+        Q2[Quelle est la distribution spatiale des impacts ?`
+        Q3[Peut-on modifier la distribution spatiale des impacts ?`
         end
         
-        subgraph epistemo[Questions épistémiques]
-        	Q4[Association de données quali ?]
-            Q5[Dépasser la monétarisation ?]
-            Q6[Evenement soudain et localisé ? ]
+        subgraph epistemo[Questions épistémiques`
+        	Q4[Association de données quali ?`
+            Q5[Dépasser la monétarisation ?`
+            Q6[Evenement soudain et localisé ? `
         
         end
     end
     
     question --> methodo
     
-    subgraph methodo[Méthodologie]
-    	M1[Données]
-        M2[Modélisation]
-        M3[Simulation]
-        M4[Evaluation]
+    subgraph methodo[Méthodologie`
+    	M1[Données`
+        M2[Modélisation`
+        M3[Simulation`
+        M4[Evaluation`
         M5(Itération)
         M6{Entretiens} --> M2
        
@@ -86,14 +86,14 @@ graph TD
     methodo  --> finalité
     
     
-    subgraph finalité[Finalité]
+    subgraph finalité[Finalité`
     
-    	Ac0[Accompagner la décision publique] --> Ac1
+    	Ac0[Accompagner la décision publique` --> Ac1
         Ac0 --> Ac2
         Ac0 --> Ac
-    	Ac1(Collectivité territoriale) --> F1[Aménagement du territoire]
-        Ac2(Etat) --> F2[Gestion du risque]
-        Ac(Diplomatie climatique) --> F3[Transition juste]
+    	Ac1(Collectivité territoriale) --> F1[Aménagement du territoire`
+        Ac2(Etat) --> F2[Gestion du risque`
+        Ac(Diplomatie climatique) --> F3[Transition juste`
     
     end
     
@@ -140,17 +140,17 @@ Ce projet de recherche s'inscrit à l'intersection de différents types de litt�
 
 D'abord, une littérature grise importante existe autour des impacts du changement climatique. 
 
-D'une part, des rapports publics mettent en avant le besoin de développer une approche spécifique aux territoires ultramarins. Un rapport de l'observatoire national sur les effets du réchauffement climatique pointe la nécessité d'évaluer le coût des impacts du changement climatique et les limites de la modélisation climatique dans les politiques d'adaptation [@onercOutremerFaceAu2012]. Par ailleurs, deux autres rapports, sur l'adaptation et sur les littoraux, pointent la nécessité de prendre en compte les dommages et ne prennent pas en compte de manière spécifique les territoires ultramarins [@onercLadaptationFranceAu2012; @onercLittoralDansContexte2015].  
-D'autre part, les assurances estiment régulièrement les coûts du changement climatique. On peut notamment citer une étude de la Caisse Centrale de Réassurance qui a simulé l'impact d'un cyclone de type Irma sur la Guadeloupe, pour estimer les pertes économiques [@nsandaCatastrophesNaturellesFrance2024]. 
+D'une part, des rapports publics mettent en avant le besoin de développer une approche spécifique aux territoires ultramarins. Un rapport de l'observatoire national sur les effets du réchauffement climatique pointe la nécessité d'évaluer le coût des impacts du changement climatique et les limites de la modélisation climatique dans les politiques d'adaptation {cite:p}`onercOutremerFaceAu2012`. Par ailleurs, deux autres rapports, sur l'adaptation et sur les littoraux, pointent la nécessité de prendre en compte les dommages et ne prennent pas en compte de manière spécifique les territoires ultramarins {cite:p}`onercLadaptationFranceAu2012; @onercLittoralDansContexte2015`.  
+D'autre part, les assurances estiment régulièrement les coûts du changement climatique. On peut notamment citer une étude de la Caisse Centrale de Réassurance qui a simulé l'impact d'un cyclone de type Irma sur la Guadeloupe, pour estimer les pertes économiques {cite:p}`nsandaCatastrophesNaturellesFrance2024`. 
 
 
 
 ###  Géographie du risque
 
 La géographie du risque conceptualise les risques naturels dans une approche intégrée éléments sociaux - éléments naturels. 
-D'abord, elle porte un travail important de conceptualisation du risque et de ses composantes. On peut notamment citer des définitions du risque [@kermischVersDefinitionMultidimensionnelle2012; @dercoleEnjeuxAuCoeur2003], des travaux sur des concepts annexes tels que la résilience [@manyenaConceptResilienceRevisited2006; @magalireghezza-zittWhatResilienceNot2012; @barrocaVulnerabiliteResilienceMutation2013], la vulnérabilité [@robertdercoleVulnerabilitesSocietesEspaces1994], la catastrophe [@clavandierRetourCatastropheScene2015]. 
-Ensuite, la géographie quantitative développe des outils permettant de prendre en compte des phénomènes quantitatifs dans leur spatialité, notamment à l'aide de Systèmes d'Information Géographique [@feuilletManuelGeographieQuantitative2019; @aschan-leygonieSystemesDinformationGeographique2023].
-Enfin, des monographies décrivent les dynamiques et les effets des risques, notamment dans le cadre des cyclones tropicaux aux petites Antilles. Un projet de RETEX scientifique du cyclone Irma (2017), mené conjointement par 10 chercheurs permet de mieux comprendre les impacts et les capacités de relèvement de différentes petites îles (Saint-Martin, Saint-Barthélémy), [@defossezCapacitesRelevementDun2021; @duvatSystemeRisqueSaintMartin2008]. 
+D'abord, elle porte un travail important de conceptualisation du risque et de ses composantes. On peut notamment citer des définitions du risque {cite:p}`kermischVersDefinitionMultidimensionnelle2012; @dercoleEnjeuxAuCoeur2003`, des travaux sur des concepts annexes tels que la résilience {cite:p}`manyenaConceptResilienceRevisited2006; @magalireghezza-zittWhatResilienceNot2012; @barrocaVulnerabiliteResilienceMutation2013`, la vulnérabilité {cite:p}`robertdercoleVulnerabilitesSocietesEspaces1994`, la catastrophe {cite:p}`clavandierRetourCatastropheScene2015`. 
+Ensuite, la géographie quantitative développe des outils permettant de prendre en compte des phénomènes quantitatifs dans leur spatialité, notamment à l'aide de Systèmes d'Information Géographique {cite:p}`feuilletManuelGeographieQuantitative2019; @aschan-leygonieSystemesDinformationGeographique2023`.
+Enfin, des monographies décrivent les dynamiques et les effets des risques, notamment dans le cadre des cyclones tropicaux aux petites Antilles. Un projet de RETEX scientifique du cyclone Irma (2017), mené conjointement par 10 chercheurs permet de mieux comprendre les impacts et les capacités de relèvement de différentes petites îles (Saint-Martin, Saint-Barthélémy), {cite:p}`defossezCapacitesRelevementDun2021; @duvatSystemeRisqueSaintMartin2008`. 
 
 Ce corpus est essentiel pour décrire précisément les interactions entre les éléments physiques des cyclones tropicaux et la dimension sociétale et humaine de leurs impacts. Les concepts et les monographies sont une mine d'or pour comprendre ces phénomènes, et notamment leur dimension spatiale. Cependant, ces travaux sont inscrits dans le temps, à un instant $t$. Il serait intéressant de pouvoir mobiliser leurs apports dans une approche de long terme. \\
 
@@ -158,9 +158,9 @@ Ce corpus est essentiel pour décrire précisément les interactions entre les �
 
 La modélisation des interactions entre le changement climatique et les sociétés permet de comprendre leurs évolutions au temps long. En particulier, les modèles intégrés éclairent les politiques publiques en évaluant les effets attendus de mesures. 
 
-La question du coût de l'inaction face au changement climatique est un thème récurrent de l'économie de l'environnement. Une approche courante est de calculer le coût social du carbone, c'est-à-dire le coût en intégrant les externalités négatives , pour évaluer l'intérêt de politiques de mitigation dans une perspective d'analyse coût-bénéfice [@nordhausSlowNotSlow1991; @nordhausRevisitingSocialCost2017; @sternEconomicsClimateChange2007; @anthoffUncertaintySocialCost2013].  Ils ont deux limitations majeures. D'une part, ils évaluent les dommages de manière très agrégée et globale, ce qui limite leur représentation de politiques ciblée, notamment d'adaptation. D'autre part, l'évaluation des dommages est sur une base monétaire, ce qui exclut ou limite la prise en compte d'effets extra-monétaires. 
+La question du coût de l'inaction face au changement climatique est un thème récurrent de l'économie de l'environnement. Une approche courante est de calculer le coût social du carbone, c'est-à-dire le coût en intégrant les externalités négatives , pour évaluer l'intérêt de politiques de mitigation dans une perspective d'analyse coût-bénéfice {cite:p}`nordhausSlowNotSlow1991; @nordhausRevisitingSocialCost2017; @sternEconomicsClimateChange2007; @anthoffUncertaintySocialCost2013`.  Ils ont deux limitations majeures. D'une part, ils évaluent les dommages de manière très agrégée et globale, ce qui limite leur représentation de politiques ciblée, notamment d'adaptation. D'autre part, l'évaluation des dommages est sur une base monétaire, ce qui exclut ou limite la prise en compte d'effets extra-monétaires. 
 
-Plus récemment, des modèles plus précis ciblent un phénomène physique particulier. Dans le modèle IMAGE, les dommages des inondations sont pris en compte par l'utilisation de données spatialisées [@vanvuurenIMAGEStrategyDocument; @winsemiusFrameworkGlobalRiver2013]. Cette approche permet une plus grande granularité, même si les dommages sont toujours monétarisés. @mendelsohnImpactClimateChange2012 s'intéresse aux effets du changement climatique sur les dommages issus des cyclones tropicaux. Deux limitations sont mentionnées dans l'article : le manque de décomposition par cause (vent, précipitation, marée cyclonique) et l'absence de modélisation de politiques d'adaptation. 
+Plus récemment, des modèles plus précis ciblent un phénomène physique particulier. Dans le modèle IMAGE, les dommages des inondations sont pris en compte par l'utilisation de données spatialisées {cite:p}`vanvuurenIMAGEStrategyDocument; @winsemiusFrameworkGlobalRiver2013`. Cette approche permet une plus grande granularité, même si les dommages sont toujours monétarisés. @mendelsohnImpactClimateChange2012 s'intéresse aux effets du changement climatique sur les dommages issus des cyclones tropicaux. Deux limitations sont mentionnées dans l'article : le manque de décomposition par cause (vent, précipitation, marée cyclonique) et l'absence de modélisation de politiques d'adaptation. 
 
 ## Questions de recherche
 
@@ -190,7 +190,7 @@ On simule l'effet du passage d'un cyclone sur une île des petites Antilles. On 
 
 On utilise des données spatialisées variées pour représenter les enjeux du territoire choisi. 
 
-Quatre grands types de données sont associés : topographie (élévation , pente, bathymétrie [@institutgeographiquenationalBDTOPO2025]) ; cyclones synthétiques (précipitation, vents, marée cyclonique [@bloemendaalSTORMIBTrACSPresent2022; @bloemendaalSTORMClimateChange2023]); aménagement (usages des sols [@zanagaESAWorldCover102022], routes, bâtis [@OSM]); et socio-économiques (densité de population, taux de pauvreté [@inseeFilosofi2021]).
+Quatre grands types de données sont associés : topographie (élévation , pente, bathymétrie {cite:p}`institutgeographiquenationalBDTOPO2025`) ; cyclones synthétiques (précipitation, vents, marée cyclonique {cite:p}`bloemendaalSTORMIBTrACSPresent2022; @bloemendaalSTORMClimateChange2023`); aménagement (usages des sols {cite:p}`zanagaESAWorldCover102022`, routes, bâtis {cite:p}`OSM`); et socio-économiques (densité de population, taux de pauvreté {cite:p}`inseeFilosofi2021`).
 
 Le niveau de granularité n'est pas encore défini ; il devrait être de l'ordre de la dizaine de mètres ou de la centaine de mètres. Pour comparaison, les données de Filosofi sont disponibles à 200m; les données de couverture du sol à 10m; de topographie à 30m. 
 
@@ -222,11 +222,11 @@ S6{SHOM} -->|coraux, bathy| T
 S7{Entretiens}--> |besoins, vulnérabilité, scénarios de dév| A
 
 
-subgraph input[input]
-M[Climato]
-S[socio-éco]
-T[Topographie]
-A[Aménagement]
+subgraph input[input`
+M[Climato`
+S[socio-éco`
+T[Topographie`
+A[Aménagement`
 end
 
 M --> |intensité| C
@@ -235,15 +235,15 @@ A --> |atténue| Al
 S --> |distribue| En
 A --> |augmente| En 
 
-subgraph modele[Représentation]
+subgraph modele[Représentation`
 
-C[Cyclone] 
-Al[Aléa]
+C[Cyclone` 
+Al[Aléa`
 C --> Al 
 
-En[Enjeu]
+En[Enjeu`
 
-Ri[Risque]
+Ri[Risque`
 Al -->|influence| Ri
 En -->|influence| Ri
 
@@ -254,9 +254,9 @@ Ri --> Ca
 Al --> Ca
 En --> Ca
 
-subgraph output[output]
+subgraph output[output`
 
-Ca[Carte]
+Ca[Carte`
 end
 
 
